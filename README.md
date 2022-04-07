@@ -13,6 +13,8 @@ pip install flask
 
 pip install wakeonlan
 
+运行脚本 python3 wakeonlan.py &
+
 脚本代码很简单，需要唤醒的电脑请确保能使用魔术封包唤醒，并且已经做好了接收魔术封包端口的映射。
 
 然后是ifttt的相关设置。
@@ -21,4 +23,8 @@ pip install wakeonlan
 
 点击“继续”后，在“then that”添加“webhooks”，点击“make a web request” 
 
-举例说明：如果你的服务器ip是11.11.11.1 
+举个栗子：如果你的服务器ip是11.11.11.1 ；需要唤醒的设备mac地址为XX.XX.XX.XX.XX.XX，需要唤醒设备的域名/ip为excample.com,需要唤醒的设备开放的端口为3389（为rdp默认端口，建议修改）。则URL栏填写http://11.11.11.1:5000/wakeonlan?mac=XX.XX.XX.XX.XX.XX&ip_address=excample.com&port=3389 Method选择GET，其他留空。
+
+点击“继续”后“保存”
+
+相关设置完成，对着手机说“ok Google” “wake on computer” 即可进行语音远程开机。
